@@ -1,17 +1,19 @@
-<div class="row">
-  <div class="col-xs-12">
-      <button
-        class="btn btn-success"
-        (click)="onBubbleSort()"
-        >Bubble Sort
-      </button>
+<div class="row mt-3">
+  <div class="col-xs-12 mx-auto">
+    <span
+      *ngFor="let number of randomArray"
+      [ngClass]="{'active': number.active}">
+      {{ number.num }}
+    </span>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-12">
-    <span *ngFor="let number of randomArray">
-      {{ number }} 
-    </span>
+<div class="row mt-3">
+  <div class="col-xs-12 mx-auto">
+      <button
+        class="btn btn-success"
+        (click)="onStep()"
+        >Bubble Sort
+      </button>
   </div>
 </div>

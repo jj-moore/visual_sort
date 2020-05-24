@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
 export class RandomArrayService {
 
   generateArray(size=100, min=0, max=1000) {
-    let arr: number[] = [];
-    let num: number;
+    let arr: {num: number, active: boolean}[] = [];
+    let myNum: number;
     for (let i = 0; i < size; i++) {
-      num = Math.floor(Math.random() * max + min);
-      arr.push(num);
+      myNum = Math.floor(Math.random() * max + min);
+      arr.push({num: myNum, active: false});
     }
     return arr;
   }
